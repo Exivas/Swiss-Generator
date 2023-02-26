@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#373445"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_Generator"
+        android:layout_width="243dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="104dp"
+        android:backgroundTint="#2979FF"
+        android:fontFamily="@font/roboto_mono_bold"
+        android:onClick="generador"
+        android:text="Generate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="401dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:background="#070000"
+        android:backgroundTint="#4A4B53"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376">
+
+        <TextView
+            android:id="@+id/txtGenerated"
+            android:layout_width="398dp"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:autoText="false"
+            android:elegantTextHeight="false"
+            android:fontFamily="@font/expletus_sans"
+            android:freezesText="false"
+            android:includeFontPadding="false"
+            android:layoutDirection="inherit"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textDirection="ltr"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="123dp"
+        android:layout_height="155dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Generator"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="16dp">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/RB_Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal" />
+
+
+        <RadioButton
+            android:id="@+id/RB_Signals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Character" />
+
+        <RadioButton
+            android:id="@+id/RB_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/EDT_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Generator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageButton
+        android:id="@+id/Copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="copyText"
+        app:layout_constraintBottom_toTopOf="@+id/EDT_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.432"
+        app:srcCompat="?attr/actionModeCopyDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,4 @@
+#Mon Mar 27 18:57:45 VET 2023
+base.0=C\:\\Users\\erick\\Desktop\\Personal\\4-Projects\\android\\bonice\\boniceprueba\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
